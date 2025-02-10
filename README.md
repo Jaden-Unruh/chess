@@ -1,6 +1,24 @@
 # Chess Engine
 ### By Jaden Unruh, for Philosophy 401: Decision Theory
 
+## Java
+As of the latest release (currently 0.0.1), the project runs out of a `.jar` file - this requires that the user has [Java](https://www.java.com/en/) installed to run. Below I will provide details on how to check if you have java installed, and how to install it if not, for both Windows and Mac computers. Note that this project was made in Java 21, so it's highly advisable that you use Java 21 or higher, as certain features may otherwise not be supported.
+
+In a future version, probably the 1.0.0 release, likely when I turn this assignment in, I'll pack it into `.exe` and Mach-O files to run on windows and MacOS without the need for java or other external libraries to be installed. In the meantime, though, I don't think that's worth doing for intermediate versions.
+
+### Windows
+To confirm if you have java installed, press `Windows` + `R` to open the Run dialog, type `cmd` and press `Enter`. This will open a command prompt window. Type `java -version` and press `Enter` to poll java version, and see what it says. If it says something like `'java' is not recognized as an internal or external command...`, then you don't have java installed. If you instead see a version number, that means you have java. This project was made in version 21, so it is highly advisable that you ensure your version is at least 21. See below for how to install or update.
+
+### MacOS
+To confirm if you have java installed, press `CMD` + `Space` to open the spotlight dialog, type `terminal` and press `Enter`. This will open the terminal. Type `java -version` and press `Enter` to poll java version, and see what it says. If it says something like `The operation couldn't be completed. Unable to locate...`, then you don't have java installed. If you instead see a version number, that means you have java. This project was made in version 21, so it is highly advisable that you ensure your version is at least 21. See below for how to install or update.
+
+### Installing or updating existing java install
+There are a few options - you can install directly from [java.com](https://www.java.com/en/download/). However, I use [Temurin](https://adoptium.net/temurin/releases/) from Adoptium, an open source Java build - there are many reasons to support open source software development, so I try to go that way when possible. Regardless of which route you go, ensure you're choosing the right build for your computer - either MacOS or Windows depending on your OS, and choosing either the ARM (aarch64) or x64 installer depending on whether your computer uses an ARM cpu or an x64 cpu. If you don't know this: AMD cpus are usually ARM, and Intel cpus are usually x64. If you have a mac computer with an M-series chip (M1, M2, M3, or M4), that's all Mac computers from November 2020 and later, these use ARM, so use that installer.
+
+If you're using Temurin, the installers have options for either `JRE` or `JDK`, and a download in `.pkg` or `.tar.gz` (Mac), and `.msi` or `.zip` (Windows). You only need the `JRE` to run java apps, the `JDK` is for development. I advise using the `.pkg` or `.msi` installer, depending if you're on Mac or Windows - these are nicely self-contained, the `.tar.gz` and `.zip` downloads are intended for slightly different use-cases.
+
+If you're using a linux computer, I assume you can choose the correct build for your specific system.
+
 ## How to use
 Download the runnable file from the `Releases` portion of this GitHub page. Use the most recent release, the file will be located under `Assets`. Double-click the file to run. If nothing happens, contact me, as something is wrong. The expected behavior is that a window will open, directing the user to a browser, to the page http://localhost:8080. The app runs a local webserver. Keep the application window open, closing it will shut down the webserver. Visiting [the mentioned page](localhost:8080) should display a chessboard set up for the start of a game.
 
